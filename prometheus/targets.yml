@@ -1,0 +1,14 @@
+- targets:
+    - 172.21.0.3:8081
+  labels:
+    name: instance-2
+
+- targets:
+    - 172.21.0.2:8081
+  labels:
+    name: instance-1
+
+- targets:
+    - 172.21.0.4:8081
+  labels:
+    name: instance-3

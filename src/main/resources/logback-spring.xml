@@ -1,0 +1,19 @@
+<configuration debug="truer">
+    <property name="PROJECT_NAME" value="log-web-demo"/>
+
+    <appender name="jsonConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+    </appender>
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file> logs/spring.log </file>
+        <append>true</append>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+    </appender>
+
+    <root level="INFO">
+
+        <appender-ref ref="jsonConsoleAppender"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>
